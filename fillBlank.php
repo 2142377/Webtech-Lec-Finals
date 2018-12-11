@@ -2,13 +2,13 @@
 <?php session_start() ?>
 <?php
 
-    $query = "SELECT COUNT(question_number) as 'total' FROM `questions` WHERE q_group =1";
+    $query = "SELECT COUNT(question_number) as 'total' FROM `questions` WHERE q_group =4";
     $results = $mysqli->query($query) or die($mysqli->error.___Line___);
     $row = $results->fetch_assoc();
     $total = $row['total'];   
     $_SESSION['total'] = $total;
     $_SESSION['score'] = 0;
-    $_SESSION['quiz'] = 1;
+    $_SESSION['quiz'] = 4;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,18 +25,19 @@
   <link href="css/responsive.css" rel="stylesheet">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
- <link rel="shortcut icon" href="images/favicon2.png">
+  <link rel="shortcut icon" href="images/favicon2.png">
+</head><!--/head-->
 
 <body>
     <div id="intro">
       <div class="test-container">
-        <h2>Test your Knowledge on PHP</h2>
+        <h2>Directions: Read each statement or question carefully and fill in the blank(s) with the correct answer.</h2>
         <ul class="list-quiz">
           <li class="odd wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"><strong>Number of Questions: </strong> <?php echo $total; ?></li>
-          <li class="even wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="450ms"><strong>Type: </strong> Multiple Choices</li>
+          <li class="even wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="450ms"><strong>Type: </strong> Fill in the blank</li>
           <li class="odd wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="550ms"><strong>Estimated Time: </strong><?php echo $total * .5; ?> Minutes</li>
         </ul>
-        <a href="qPhp.php?n=1" class="start">Start Quiz</a>
+        <a href="qFillBlank.php?n=36" class="start">Start Quiz</a>
       </div>
 
        <div class="row justify-content-center mb-5">
@@ -47,31 +48,32 @@
             </div>
             <div class="row blog-entries on-quiz text-center">
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <a href="jspQuiz.php" class="blog-entry">
-                    <img src="images/jsp.jpg" alt="Image placeholder">
-                    <h2>JSP Quiz</h2>
+                    <a href="acronym.php" class="blog-entry">
+                    <img src="images/acronym.png" alt="Image placeholder">
+                    <h2>Acronym</h2>
                     </a>
                 </div>
         
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    <a href="servletQuiz.php" class="blog-entry">
-                    <img src="images/Java-Servlets.png" alt="Image placeholder">
-                    <h2>Java Servlet Quiz</h2>
+                    <a href="trueFalse.php" class="blog-entry">
+                    <img src="images/True-False_Logo.JPG" alt="Image placeholder">
+                    <h2>True or False</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <a href="nodejsQuiz.php" class="blog-entry">
-                    <img src="images/nodejs_logo.png" alt="Image placeholder">
-                    <h2>Node JS Quiz</h2>
+                    <a href="fillBlank.php" class="blog-entry">
+                    <img src="images/fill-in-the-blanks.png" alt="Image placeholder">
+                    <h2>Fill in the blank</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <a href="phpQuiz.php" class="blog-entry">
+                    <a href="multipleChoice.php" class="blog-entry">
                     <img src="images/php.png" alt="Image placeholder">
-                    <h2>PHP Quiz</h2>
+                    <h2>Multiple Choice</h2>
                     </a>
                 </div>
             </div>
+
 
 
     <section class="learning-button">
@@ -82,13 +84,6 @@
   </div>
 
     <footer id="footer">
-    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-      <div class="container text-center">
-        <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="../images/logo.png" alt=""></a>
-        </div>
-      </div>
-    </div>
     <div class="footer-bottom">
       <div class="container">
         <div class="row">

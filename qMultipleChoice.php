@@ -9,7 +9,7 @@
   $query = "SELECT * FROM choices WHERE  question_number = $number";
   $choices = $mysqli->query($query) or die($mysqli->error.___Line___);
   //number of questions
-  $query = "SELECT * FROM `choices` WHERE question_number = '3'";
+  $query = "SELECT * FROM `choices` WHERE question_number = '1'";
   $results = $mysqli->query($query) or die($mysqli->error.___Line___);
   $total = $results->num_rows;
 ?>
@@ -34,8 +34,9 @@
 <body>
     <div id="intro">
       <div class="container">
+
+
       	<div class="quiz-container">
-      		<span class="float-title">JSP</span>
 	      	<p> SCORE: <bold><?php echo $_SESSION['score'] ?> pts </bold></p>
 	        <!-- <div class="current">Question <?php echo $question['question_number']; ?> of <?php echo $_SESSION['total'] ?></div> -->
 	        <p class="question">
@@ -51,7 +52,6 @@
 	          <input type="hidden" name="number" value="<?php echo $number; ?>" />
          </div>
 
-
           <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center">
                 <h2>Changed your mind?</h2>
@@ -60,29 +60,28 @@
             </div>
             <div class="row blog-entries on-quiz text-center">
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <a href="jspQuiz.php" class="blog-entry">
-                    <img src="images/jsp.jpg" alt="Image placeholder">
-                    <h2>JSP Quiz</h2>
+                    <a href="acronym.php" class="blog-entry">
+                    <img src="images/acronym.png" alt="Image placeholder">
+                    <h2>Acronym</h2>
                     </a>
                 </div>
         
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    <a href="servletQuiz.php" class="blog-entry">
-                    <img src="images/Java-Servlets.png" alt="Image placeholder">
-                    <h2>Java Servlet Quiz</h2>
+                    <a href="trueFalse.php" class="blog-entry">
+                    <img src="images/True-False_Logo.JPG" alt="Image placeholder">
+                    <h2>True or False</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <a href="nodejsQuiz.php" class="blog-entry">
-                    <img src="images/nodejs_logo.png" alt="Image placeholder">
-                    <h2>Node JS Quiz</h2>
+                    <a href="fillBlank.php" class="blog-entry">
+                    <img src="images/fill-in-the-blanks.png" alt="Image placeholder">
+                    <h2>Fill in the blank</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <a href="phpQuiz.php" class="blog-entry">
+                    <a href="multipleChoice.php" class="blog-entry">
                     <img src="images/php.png" alt="Image placeholder">
-                    <h2>PHP Quiz</h2>
-                    </a>
+                    <h2>Multiple Choice</h2>                    </a>
                 </div>
             </div>
 
@@ -94,13 +93,6 @@
   </div>
 
     <footer id="footer">
-    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-      <div class="container text-center">
-        <div class="footer-logo">
-          <a href="../index.html"><img class="img-responsive" src="../images/logo.png" alt=""></a>
-        </div>
-      </div>
-    </div>
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
@@ -114,16 +106,16 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="../js/jquery.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="../js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="../js/wow.min.js"></script>
-  <script type="text/javascript" src="../../js/mousescroll.js"></script>
-  <script type="text/javascript" src="../js/smoothscroll.js"></script>
-  <script type="text/javascript" src="../js/jquery.countTo.js"></script>
-  <script type="text/javascript" src="../js/lightbox.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/mousescroll.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

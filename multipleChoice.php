@@ -1,17 +1,14 @@
 <?php include 'db.php'; ?>
-<?php session_start(); ?>
+<?php session_start() ?>
 <?php
-  $number = (int) $_GET['n'];
-  //Questions
-  $query = "SELECT * FROM questions WHERE  question_number = $number";
-  $result = $mysqli->query($query) or die($mysqli->error.___Line___);
-  $question = $result->fetch_assoc();
-  $query = "SELECT * FROM choices WHERE  question_number = $number";
-  $choices = $mysqli->query($query) or die($mysqli->error.___Line___);
-  //number of questions
-  $query = "SELECT * FROM `choices` WHERE question_number = '4'";
-  $results = $mysqli->query($query) or die($mysqli->error.___Line___);
-  $total = $results->num_rows;
+
+    $query = "SELECT COUNT(question_number) as 'total' FROM `questions` WHERE q_group =1";
+    $results = $mysqli->query($query) or die($mysqli->error.___Line___);
+    $row = $results->fetch_assoc();
+    $total = $row['total'];   
+    $_SESSION['total'] = $total;
+    $_SESSION['score'] = 0;
+    $_SESSION['quiz'] = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,31 +25,21 @@
   <link href="css/responsive.css" rel="stylesheet">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon2.png">
-</head><!--/head-->
+ <link rel="shortcut icon" href="images/favicon2.png">
 
 <body>
     <div id="intro">
-      <div class="container">
-        <div class="quiz-container">
-          <span class="float-title">Node JS</span>
-          <p> SCORE: <bold><?php echo $_SESSION['score'] ?> pts </bold></p>
-        <!--   <div class="current">Question <?php echo $question['question_number']; ?> of <?php echo $_SESSION['total'] ?></div> -->
-          <p class="question">
-            <?php echo $question['text']; ?>
-          </p>
-          <form method="post" action="process.php">
-            <ul class="choices">
-              <?php while($row = $choices->fetch_assoc()): ?>
-                <li><input name="choice" type="radio" value="<?php echo $row['id'] ?>" /><?php echo $row['text']; ?></li>
-              <?php endwhile; ?>
-            </ul>
-            <input type="submit" value="Submit" />
-            <input type="hidden" name="number" value="<?php echo $number; ?>" />
-         </div>
+      <div class="test-container">
+        <h2>Directions: Read the sentences carefully. Choose the letter of the correct answer.</h2>
+        <ul class="list-quiz">
+          <li class="odd wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"><strong>Number of Questions: </strong> <?php echo $total; ?></li>
+          <li class="even wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="450ms"><strong>Type: </strong> Multiple Choice</li>
+          <li class="odd wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="550ms"><strong>Estimated Time: </strong><?php echo $total * .5; ?> Minutes</li>
+        </ul>
+        <a href="qMultipleChoice.php?n=1" class="start">Start Quiz</a>
+      </div>
 
-
- <div class="row justify-content-center mb-5">
+       <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center">
                 <h2>Changed your mind?</h2>
                 <p class="lead">You may still choose what Quiz you want to take instead.</p>
@@ -60,40 +47,48 @@
             </div>
             <div class="row blog-entries on-quiz text-center">
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <a href="jspQuiz.php" class="blog-entry">
-                    <img src="images/jsp.jpg" alt="Image placeholder">
-                    <h2>JSP Quiz</h2>
+                    <a href="acronym.php" class="blog-entry">
+                    <img src="images/acronym.png" alt="Image placeholder">
+                    <h2>Acronym</h2>
                     </a>
                 </div>
         
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    <a href="servletQuiz.php" class="blog-entry">
-                    <img src="images/Java-Servlets.png" alt="Image placeholder">
-                    <h2>Java Servlet Quiz</h2>
+                    <a href="trueFalse.php" class="blog-entry">
+                    <img src="images/True-False_Logo.JPG" alt="Image placeholder">
+                    <h2>True or False</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <a href="nodejsQuiz.php" class="blog-entry">
-                    <img src="images/nodejs_logo.png" alt="Image placeholder">
-                    <h2>Node JS Quiz</h2>
+                    <a href="fillBlank.php" class="blog-entry">
+                    <img src="images/fill-in-the-blanks.png" alt="Image placeholder">
+                    <h2>Fill in the blank</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <a href="phpQuiz.php" class="blog-entry">
+                    <a href="multipleChoice.php" class="blog-entry">
                     <img src="images/php.png" alt="Image placeholder">
-                    <h2>PHP Quiz</h2>
+                    <h2>Multiple Choice</h2>
                     </a>
                 </div>
             </div>
 
-      <section class="learning-button">
-        <div class="caption">
-          <a class="btn toggle-btn" href="index.php">Go Back</a>
-        </div>
-      </section>
+
+    <section class="learning-button">
+      <div class="caption">
+        <a class="btn toggle-btn" href="index.php">Go Back</a>
+      </div>
+    </section>
   </div>
 
     <footer id="footer">
+    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a href="index.html"><img class="img-responsive" src="../images/logo.png" alt=""></a>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">
       <div class="container">
         <div class="row">

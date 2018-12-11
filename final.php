@@ -21,7 +21,7 @@
   	<div id="final-container-q">
       <div class="container">
         <h2>You're Done!</h2>
-          <p>You have completed the test</p>
+          <p>You have completed the quiz</p>
           <p class="final-score">Final Score: <span> <?php echo $_SESSION['score']; ?></span> pts</p>
           <a href="index.php" class="start">Back to Main Page</a>      
       </div>
@@ -37,28 +37,28 @@
             </div>
             <div class="row blog-entries on-quiz text-center">
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <a href="jspQuiz.php" class="blog-entry">
-                    <img src="images/jsp.jpg" alt="Image placeholder">
-                    <h2>JSP Quiz</h2>
+                    <a href="acronym.php" class="blog-entry">
+                    <img src="images/acronym.png" alt="Image placeholder">
+                    <h2>Acronym</h2>
                     </a>
                 </div>
         
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    <a href="servletQuiz.php" class="blog-entry">
-                    <img src="images/Java-Servlets.png" alt="Image placeholder">
-                    <h2>Java Servlet Quiz</h2>
+                    <a href="trueFalse.php" class="blog-entry">
+                    <img src="images/True-False_Logo.JPG" alt="Image placeholder">
+                    <h2>True or False</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <a href="nodejsQuiz.php" class="blog-entry">
-                    <img src="images/nodejs_logo.png" alt="Image placeholder">
-                    <h2>Node JS Quiz</h2>
+                    <a href="fillBlank.php" class="blog-entry">
+                    <img src="images/fill-in-the-blanks.png" alt="Image placeholder">
+                    <h2>Fill in the blank</h2>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <a href="phpQuiz.php" class="blog-entry">
+                    <a href="multipleChoice.php" class="blog-entry">
                     <img src="images/php.png" alt="Image placeholder">
-                    <h2>PHP Quiz</h2>
+                    <h2>Multiple Choice</h2>
                     </a>
                 </div>
             </div>

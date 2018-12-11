@@ -37,13 +37,13 @@
 				exit();
 		} else {
 			if ($_SESSION['quiz'] == 1) {
-				header("Location: qPhp.php?n=".$next);	
+				header("Location: qMultipleChoice.php?n=".$next);	
 			}else if($_SESSION['quiz'] == 2) {
- 				header("Location: qServlet.php?n=".$next);
+ 				header("Location: qTrueFalse.php?n=".$next);
 			}else if ($_SESSION['quiz'] == 3) {
-				header("Location: qJsp.php?n=".$next);				
+				header("Location: qAcronym.php?n=".$next);				
 			}else if ($_SESSION['quiz'] == 4) {
-				header("Location: qNodejs.php?n=".$next);	
+				header("Location: qFillBlank.php?n=".$next);	
 			}
 		}
 	}
