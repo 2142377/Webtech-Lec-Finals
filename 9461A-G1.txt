@@ -1,0 +1,169 @@
+Acronyms
+1. What is the acronym of DOM?
+Answer: Document Object Model
+2. What is the acronym of JSON?
+Answer: Javascript Object Notation
+3. What is the acronym of HTML?
+Answer: Hypertext Markup Language
+4. What is the acronym of CSS?
+Answer: Cascading Style Sheets
+5. What is the acronym of BOM?
+Answer: Browser Object Model
+6. What is the acronym of HTTP?
+Answer: Hypertext Transfer Protocol
+7. What is the acronym of XHTML?
+Answer: Extensible Hypertext Markup Language
+8. What is the acronym of SASS?
+Answer: Syntatically Awesome Stylesheet
+9. What is the acronym of AJAX?
+Answer: Asynchronous Javascript and XML
+10. What is the acronym of XSS?
+Answer: Cross-Site Scripting
+
+Fill in the blank
+1. ______ is a programming language used to specify the presentation aspects of a document
+Answer: CSS / Cascading Style Sheets
+2. A _____ element tag which displays a horizontal line
+Answer: hr / <hr>
+3. A ______ selector that target a given element
+Answer: type 
+4. A ___symbol used which is the direct descendant of an element
+Answer: >
+5. A _______ method that gets the element by its id.
+Answer: getElementById() / getElementById / getElementById();
+6. ______ represents the document as nodes and objects.
+Answer: DOM / Document Object Model
+7. _______ a programming language that deals with the interaction of the user and can alter the document using scripts.
+Answer: Javascript
+8. A ______ method in which when clicked, an event will happen
+Answer: onclick(); / onclick() / onclick
+9. A _______ programming language that for creating web pages
+Answer: HTML / Hypertext Markup Language
+10. A ______ element used when the browser does not support script files
+Answer: <noscript> / noscript
+
+True or False
+1. Protocols is a various standards defining communication parameters, such as message and data formats, device addressing, error handling, etc.
+ANSWER: TRUE
+
+2. HTTP is defined in standard documents known as Request for Connectivity (RFC) published by theInternet Engineering Task Force (IETF);
+ANSWER: FALSE, “Comments” 
+
+3. Status Code is a 3-digit integer code, indicating the result of the operation.
+ANSWER: TRUE
+
+4. HTTP defines 7 standard methods, namely, GET, HEAD, POST, PUT, DELETE, OPTIONS, and TRACE.
+ANSWER: FALSE
+
+5. Internet Software is ranges from mid-level network device drivers to high-level applications implementing various Internet functionalities.
+ANSWER: FALSE
+
+6. Web Servers are primarily used to serve web applications that consist of dynamic web resources.
+ANSWER: FALSE
+
+7. MIME stands for Multipurpose Internet Message Extensions
+ANSWER: FALSE
+
+8. World Wide Web: distributed, collaborative, hypermedia information system built on top of the infrastructure provided by the Internet.
+ANSWER: TRUE
+
+9. Web Application Development activities can be characterized as: Front-end web development, Back-end web development, and full-stack web development.
+ANSWER: TRUE
+
+10. Front-end web development is primarily concerned with the implementation of the business logic of web applications that runs on the server environment.
+ANSWER: FALSE
+
+Multiple Choice
+1. A request that is recommended for few small requests.
+a. Asynchronous request
+b. JavaScript request
+c. Sync request 
+d. Synchronous request
+Answer:	D
+
+2.	An open, standard-based development platform and is a collection of Java APIs that is owned by Oracle. 
+a.	Java EE 
+b.	Java SE
+c.	Java ME
+d.	Java PE
+Answer: A
+3.	It runs in a server application as a small Java program. It receives and responds to requests from web clients. 
+a.	Listeners
+b.	Web context
+c.	Servlet 
+d.	DOM 
+Answer: C
+4.	An object that provides methods that servlets use to communicate with the servlet container.
+a.	Web context  
+b.	Listeners
+c.	Servlet
+d.	DOM
+Answer: A
+5.	A web tier container is called ___ ? 
+a.	Web container 
+b.	Servlet container 
+c.	Java container
+d.	API container 
+Answer: B
+6.	It is used to intercept and process requests before they are sent to servlets.
+a.	Filters
+b.	DOM
+c.	Server
+d.	Listeners 
+Answer: D
+7.	A syntax that is similar to C and Perl, it is an open-source server-side scripting language that is especially suited for web development and can be embedded into HTML.
+a.	PHP 
+b.	Java
+c.	Node.js
+d.	JavaScript 
+Answer: A
+8.	It uses an event-based server execution procedure and executes JavaScript code outside of a browser.
+a.	PHP
+b.	Java
+c.	Node.js 
+d.	JavaScript 
+Answer: C
+9.	It is a script that connects the website to backend servers, data processing and controlling the behavior of higher layers.
+a.	Server-side PHP scripts 
+b.	HTML
+c.	CSS scripts
+d.	JavaScript
+Anwer: A
+10.	Which statement is correct about server-side scripts 
+a.	Server-side scripts is visible to the end user.
+b.	Server-side scripts is invisible to the end user. 
+c.	Server-side scripts is defined to users.
+d.	None of the above.
+Answer: C
+11.	If PHP is a scripting language, what kind of language is Java?
+a.	Tags language 
+b.	Compiled language 
+c.	Markup language
+d.	None of the above
+Answer: B
+12.	What events are generated by the Node objects? 
+a.	Lowevents
+b.	Highevents
+c.	Emitters 
+d.	Generators
+Answer: C
+13.	A function that removes all handlers name events
+a.	deleteAllListener(name)
+b.	deleteListerners(name, f)
+c.	removeListener (name, f)
+d.	removeAllListeners(name)
+Answer: A
+14.	Who is the father of PHP?
+a.	Tim-Berners Lee
+b.	Rasmus Lerdorf 
+c.	Drek Kolkevi 
+d.	Steve Jobs
+Answer: B
+15.	What is the reason why Node rely on event handlers?
+a.	APIs are reusable
+b.	APIs are recyclable 
+c.	APIs are synchronous 
+d.	APIs are asynchronous 
+Answer: D
+
+

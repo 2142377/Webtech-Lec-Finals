@@ -16,7 +16,6 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon2.png">
 </head><!--/head-->
-
 <body>
   	<div id="final-container-q">
       <div class="container">
@@ -26,9 +25,6 @@
           <a href="index.php" class="start">Back to Main Page</a>      
       </div>
     </div>
-
-
-
   <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center">
                 <h2>Want to take another quiz?</h2>
@@ -42,7 +38,6 @@
                     <h2>Acronym</h2>
                     </a>
                 </div>
-        
                 <div class="col-md-3 col-sm-6 col-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                     <a href="trueFalse.php" class="blog-entry">
                     <img src="images/True-False_Logo.JPG" alt="Image placeholder">
@@ -62,8 +57,6 @@
                     </a>
                 </div>
             </div>
-
-
     <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
@@ -82,16 +75,5 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/mousescroll.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
-  <script type="text/javascript" src="js/jquery.countTo.js"></script>
-  <script type="text/javascript" src="js/lightbox.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-
 </body>
 </html>
