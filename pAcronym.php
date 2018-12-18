@@ -38,6 +38,8 @@
 		} else {
 			if ($_SESSION['quiz'] == 3) {
 				header("Location: qAcronym.php?n=".$next);					
+			}else if ($_SESSION['quiz'] == 4) {
+				header("Location: qFillBlank.php?n=".$next);	
 			}
 		}
 	}

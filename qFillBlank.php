@@ -9,7 +9,7 @@
   $query = "SELECT * FROM choices WHERE  question_number = $number";
   $choices = $mysqli->query($query) or die($mysqli->error.___Line___);
   //number of questions
-  $query = "SELECT * FROM `choices` WHERE question_number = '4'";
+  $query = "SELECT * FROM `choices` WHERE question_number = '3'";
   $results = $mysqli->query($query) or die($mysqli->error.___Line___);
   $total = $results->num_rows;
 ?>
@@ -26,7 +26,6 @@
   <link href="css/main.css" rel="stylesheet">
   <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon2.png">
 </head><!--/head-->
@@ -39,19 +38,18 @@
           <p class="question">
             <?php echo $question['text']; ?>
           </p>
-          <form method="post" action="process.php">
+          <form method="post" action="pAcronym.php">
             <ul class="choices">
               <?php while($row = $choices->fetch_assoc()): ?>
-                <li><input name="choice" type="hidden" value="<?php echo $row['id'] ?>" /></li>
+                <li><input name="choice" type="text" value="<?php $row['text'] ?>" /></li>
               <?php endwhile; ?>
-               <input type="text" name="answer" autocomplete="off">
             </ul>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit"/>
             <input type="hidden" name="number" value="<?php echo $number; ?>" />
          </div>
 
 
- <div class="row justify-content-center mb-5">
+          <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center">
                 <h2>Changed your mind?</h2>
                 <p class="lead">You may still choose what Quiz you want to take instead.</p>
@@ -93,6 +91,13 @@
   </div>
 
     <footer id="footer">
+    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a href="../index.html"><img class="img-responsive" src="../images/logo.png" alt=""></a>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
