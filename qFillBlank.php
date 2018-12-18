@@ -39,12 +39,11 @@
           <p class="question">
             <?php echo $question['text']; ?>
           </p>
-          <form method="post" action="process.php">
+          <form method="post" action="pFillBlank.php">
             <ul class="choices">
               <?php while($row = $choices->fetch_assoc()): ?>
-                <li><input name="choice" type="hidden" value="<?php echo $row['id'] ?>" /></li>
+                <li><input name="choice" type="text" autocomplete="off" value="<?php $row['text'] ?>" /></li>
               <?php endwhile; ?>
-               <input type="text" name="answer" autocomplete="off">
             </ul>
             <input type="submit" value="Submit" />
             <input type="hidden" name="number" value="<?php echo $number; ?>" />
