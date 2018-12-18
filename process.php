@@ -40,9 +40,9 @@
 				header("Location: qMultipleChoice.php?n=".$next);	
 			}else if($_SESSION['quiz'] == 2) {
  				header("Location: qTrueFalse.php?n=".$next);			
-			// }else if ($_SESSION['quiz'] == 4) {
-			// 	header("Location: qFillBlank.php?n=".$next);	
-			// }
+			}else if ($_SESSION['quiz'] == 4) {
+				header("Location: qFillBlank.php?n=".$next);	
+			}
 		}
 	}
 	// if(isset($_POST['submit'])){
