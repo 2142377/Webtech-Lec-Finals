@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concert-O</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <div id="search_bar" class="container">
+        <div class="center">
+            <form action="#" onsubmit="getCity()">
+                <img src="logo.png">
+                <input id="search_location" type="text" placeholder="Enter your city...">
+                <input type="submit" value="Go">
+            </form>
+        </div>
+    </div>
+    
+    <div id="results">
+        <h2>Search Results:</h2>
+        <div id="venue" class="events"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="function.js"></script>
+</body>
+</html>
